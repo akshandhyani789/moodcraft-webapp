@@ -1,0 +1,65 @@
+ 
+ #loader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(255, 255, 255, 0.8);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 999;
+   display: none;
+ }
+
+ .spinner {
+   width: 50px;
+   height: 50px;
+   border: 5px solid #ccc;
+   border-top: 5px solid #3498db;
+   border-radius: 50%;
+   animation: spin 1s linear infinite;
+ }
+
+ @keyframes spin {
+   to {
+     transform: rotate(360deg);
+   }
+ }
+
+ .mood {
+   border-bottom: 0.2px solid grey;
+ }
+
+.container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-family: sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: all ease-out 2s;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

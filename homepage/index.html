@@ -1,0 +1,422 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+
+  <title>MoodCraft | A stress relif page</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+  <div class="relative flex size-full min-h-screen flex-col bg-[#f9f8fc] group/design-root overflow-x-hidden"
+    style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+     <header
+  class="fixed w-full h-[50px] flex items-center justify-between border-b border-[#ebe7f3] px-6 py-3 z-50 bg-gray-200">
+
+  <!-- Logo + Title -->
+  <div class="flex items-center gap-4 text-[#110d1b]">
+    <div class="size-4">
+      <!-- SVG ICON (unchanged) -->
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    
+      </svg>
+    </div>
+    <h2 class="text-[#110d1b] text-lg font-bold tracking-[-0.015em] cursor-pointer"><a href="#home">MoodCraft</a></h2>
+  </div>
+
+  <!-- Hamburger Icon (only on small screens) -->
+  <div class="md:hidden block max-[400px]:block">
+    <button onclick="toggleMobileMenu()">
+      <svg class="w-6 h-6 text-[#110d1b]" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Desktop Nav (hidden on small) -->
+  <div class="flex flex-1 justify-end gap-8 hidden sm:flex">
+    <div class="flex items-center gap-9">
+      <a class="text-[#110d1b] text-sm font-medium leading-normal transition-all duration-300 hover:text-blue-700 hover:scale-110 cursor-pointer"
+        href="#home">Home</a>
+      <a class="text-[#110d1b] text-sm font-medium leading-normal transition-all duration-300 hover:text-blue-700 hover:scale-110 cursor-pointer"
+        href="#features">Features</a>
+      <a class="text-[#110d1b] text-sm font-medium leading-normal transition-all duration-300 hover:text-blue-700 hover:scale-110 cursor-pointer"
+        href="#games">Games</a>
+      <a class="text-[#110d1b] text-sm font-medium leading-normal transition-all duration-300 hover:text-blue-700 hover:scale-110 cursor-pointer"
+        href="#support">Support</a>
+    </div>
+    <div class="profilesection">
+      <button
+        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#7342ef] text-[#f9f8fc] text-sm font-bold leading-normal tracking-[0.015em]">
+        <span class="truncate transition-transform duration-300 hover:scale-105 loginBtn">Get Started</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu"
+  class="hidden fixed top-[50px] left-0 w-full bg-gray-100 py-4 z-40 flex-col items-center gap-4 md:hidden">
+  <a href="#home" class="text-[#110d1b] text-sm font-medium hover:text-blue-700">Home</a>
+  <a href="#features" class="text-[#110d1b] text-sm font-medium hover:text-blue-700">Features</a>
+  <a href="#games" class="text-[#110d1b] text-sm font-medium hover:text-blue-700">Games</a>
+  <a href="#support" class="text-[#110d1b] text-sm font-medium hover:text-blue-700">Support</a>
+  <button
+    class="px-4 py-2 bg-[#7342ef] text-white text-sm rounded-xl hover:scale-105 transition duration-300 loginBtn">Get Started</button>
+</div>
+
+      <div id="loader">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="px-40 flex flex-1 justify-center py-16 pt-[70px]" id="home">
+
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="@container">
+            <div class="@[480px]:p-4 ">
+
+              <div
+                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-jWk80b6TDuLIYnVqylJ4i_efG5oQ4XWCI4AllqbbjFvjpZqXSaOHScw9xMyGKfcFa7T21j4csd0ELUa_zGI-btyKkqTLjdp-reidzP0Maem71SB1wa-ClQAu25TXrvQ1fXqYt_wovPGb9H8oquXm-yla7bloTa_auyioMl0RWSMLbZ22P62bNFnYZGa2mNRKmVRYukHso9a1GCnvBw7yBQoVYnRhNpT1-GQ5f5on2zk7LAA5nh-5dZdlf-6o2zjjsPecZ2bnECax");'>
+                <div class="flex flex-col gap-2 text-center">
+                  <h1
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    Your Mood. Your Control.
+                  </h1>
+                  <h2
+                    class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    Track emotions, breathe, and relax with MoodCraft.
+                  </h2>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class=" flex flex-1 justify-center">
+            <div class="layout-content-container flex flex-col max-w-[100%] flex-1">
+              <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p class="text-[#0e151b] tracking-light text-[32px] font-bold leading-tight min-w-72">How are you
+                  feeling today?</p>
+              </div>
+              <div class="flex flex-wrap gap-3 p-4">
+                <label
+                  class="text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-[#d0dce7] px-4 h-11 text-[#0e151b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#3095e8] relative cursor-pointer">
+                  Happy
+                  <input type="radio" class="invisible absolute  moodopt" name="bb7e9992-c788-4569-be3b-658fafd1e43b"/>
+                </label>
+                <label
+                  class="text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-[#d0dce7] px-4 h-11 text-[#0e151b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#3095e8] relative cursor-pointer">
+                  Sad
+                  <input type="radio" class="invisible absolute moodopt"  name="bb7e9992-c788-4569-be3b-658fafd1e43b" />
+                </label>
+                <label
+                  class="text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-[#d0dce7] px-4 h-11 text-[#0e151b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#3095e8] relative cursor-pointer">
+                  Anxious
+                  <input type="radio" class="invisible absolute moodopt"  name="bb7e9992-c788-4569-be3b-658fafd1e43b" />
+                </label>
+                <label
+                  class="text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-[#d0dce7] px-4 h-11 text-[#0e151b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#3095e8] relative cursor-pointer">
+                  Angry
+                  <input type="radio" class="invisible absolute moodopt"  name="bb7e9992-c788-4569-be3b-658fafd1e43b" />
+                </label>
+                <label
+                  class="text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-[#d0dce7] px-4 h-11 text-[#0e151b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#3095e8] relative cursor-pointer">
+                  Excited
+                  <input type="radio" class="invisible absolute moodopt"  name="bb7e9992-c788-4569-be3b-658fafd1e43b" />
+                </label>
+                <label
+                  class="text-sm font-medium leading-normal flex items-center justify-center rounded-xl border border-[#d0dce7] px-4 h-11 text-[#0e151b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#3095e8] relative cursor-pointer">
+                  Tired
+                  <input type="radio" class="invisible absolute moodopt"  name="bb7e9992-c788-4569-be3b-658fafd1e43b" />
+                </label>
+                <button id="stop" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300">Stop listening</button>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <textarea placeholder="Add a note about your mood"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0e151b] focus:outline-0 focus:ring-0 border border-[#d0dce7] bg-slate-50 focus:border-[#d0dce7] min-h-36 placeholder:text-[#4e7697] p-[15px] text-base font-normal leading-normal"></textarea>
+                </label>
+              </div>
+              <div class="flex px-4 py-3 justify-end">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#3095e8] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]">
+                  <span class="truncate" >Save Mood</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-[#110d1b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+            id="breathing">Breathing
+            Exercises</h2>
+          <div class="flex flex-col items-stretch gap-6 bg-[#f9f8fc] px-4 pb-4 pt-3 text-[#110d1b]">
+            <div class="flex items-center justify-center py-7">
+              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-64"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkYKJPUseKc2vl4gmoZSzaQgHUSx0luMS3giaZaDMdAHrDtkmka3c2s3o9CyWJzNN7rEf5tHJV-lpVDMOZlGR7oeOYFtNWl7t8iipOclJwYhgeqyLvX6bI8os_wJMP-jBn6URfutyQji9nRkkQQD_WsBnXPagI5sY1S-FkSpjeEUCAKMbWWhyiCO_Hfmpm3xCE9cAc06KlsPkVCKqslcdhZQhXRecIH7dvtG-VbKRPXbzP8NMszSE6wgOVnhbchKDqEI3cTdKUoGQ6");'>
+              </div>
+            </div>
+            <div class="text-center">
+              <p class="text-[#110d1b] text-[22px] font-bold leading-tight tracking-[-0.015em] truncate">Breathe In</p>
+              <p class="text-[#624c9a] text-base font-normal leading-normal truncate exersizetext">Start</p>
+              <p class="text-[#624c9a] text-base font-normal leading-normal truncate exersizetext" id="msg"></p>
+            </div>
+            <div class="flex items-center justify-center gap-6 pt-1">
+
+              <button class="flex shrink-0 items-center justify-center rounded-full size-16 bg-[#7342ef] text-[#f9f8fc]"
+                id="toggleBtn">
+                <div class="text-inherit" id="playbox">
+                  <i id="icon" class="fa-solid fa-play text-2xl"></i>
+                </div>
+              </button>
+
+            </div>
+          </div>
+          <h2 class="text-[#110d1b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" id="games">
+            Mind Games</h2>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl  duration-300 hover:scale-105"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcOysbOgfWlWpL3PxTg_oZzLwELCCrcQ_aTRITFrYI8_ePX94c-au1C6xCBdMghDlDEbMym_uEI8nJT0oG7jquEGp5x6a_r9ux9FSZ075tuDdgcLwN9OKnGg0pZMwPjvSJCwYwDwoSAOkJIjdKm3qtNHY3AUZL4rEOxbB0Fhr8r3v7dWPm5W2NFBuxNCKbhLo8NYmN3-rpq697PYpO2t3BWpqo7aE1ThGhiGMF-SCJF3QbdsX8zIfsPWR2Nm95qRqWC3C3yOIM-jaU");'>
+              </div>
+              <div>
+                <p class="text-[#110d1b] text-base font-medium leading-normal">Memory Match</p>
+                <p class="text-[#624c9a] text-sm font-normal leading-normal">Improve your memory with fun matching
+                  games.</p>
+                <p class="text-sm font-normal leading-normal">
+                  <a href="https://poki.com/en/g/find-a-cat"
+                    class="bg-[#624c9a] text-white px-4 py-2 rounded-md inline-block hover:bg-[#503a83] transition">
+                    Play Now
+                  </a>
+                </p>
+
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl duration-300 hover:scale-105"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhxwc6uaJTE8r12Iu7tL9Gwj1XoIsABJrpPK5vxyedVDy4BOk9llAjClmX9aPnrX7DZL1F03ORyuTrRPTt5p76ZS2cEKyEiyM62I0YxdSEuv-cLgK4_oN_uBOQoczjvCQv6Vod3A9De9tPfpxnNspwMdPmFd9IDx_SIKlg2-ugJNRBH3GXIWg0evZodaa1sbhwMIPjjC0bFVbAZFoBAiIOIkjIvI0uA215wDjEZRVHdiFgb6At2qIr8Y6oiBkjED6Iv9LG_Q2dvEMa");'>
+              </div>
+              <div>
+                <p class="text-[#110d1b] text-base font-medium leading-normal">Focus Bubble Pop</p>
+                <p class="text-[#624c9a] text-sm font-normal leading-normal">Enhance your focus by popping bubbles.</p>
+                <p class="text-sm font-normal leading-normal">
+                  <a href="https://poki.com/en/g/bubbles-cool"
+                    class="bg-[#624c9a] text-white px-4 py-2 rounded-md inline-block hover:bg-[#503a83] transition">
+                    Play Now
+                  </a>
+                </p>
+
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl  duration-300 hover:scale-105"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFawd_BV_8rMSvteT84dKCJAFlfWl8vsf32Fh4bgxXlgAZRrWtNZCixWq4_SHGIYeIdfn3imx5r3g8DTL_BoA5uIUVQUb9wQhfJJxYWi54Q8wIBXYFmNCrMGJp6JbYsjSI9FF4Ottqf9K7XtJW9AmPm-ZZHwasB6QqDrUgxE86n2HQbyqlt1-YJoXRDbPfOAELgGo5FMQ_kyOvjr3ndlZgA9hX73ZCDkgEZElch6iOxtvFwNjDEX2g-6HD3UUKKuUsICKP_i7lGxT1");'>
+              </div>
+              <div>
+                <p class="text-[#110d1b] text-base font-medium leading-normal">Mood Puzzle</p>
+                <p class="text-[#624c9a] text-sm font-normal leading-normal">Solve puzzles to boost your mood.</p>
+                <p class="text-sm font-normal leading-normal">
+                  <a href="https://poki.com/en/g/blocky-blast-puzzle"
+                    class="bg-[#624c9a] text-white px-4 py-2 rounded-md inline-block hover:bg-[#503a83] transition">
+                    Play Now
+                  </a>
+                </p>
+
+              </div>
+            </div>
+          </div>
+          <h2 class="text-[#110d1b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+            id="features">Features</h2>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div class="flex flex-1 gap-3 rounded-lg border border-[#d6cfe7] bg-[#f9f8fc] p-4 flex-col">
+              <div class="text-[#110d1b]" data-icon="Smiley" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM80,108a12,12,0,1,1,12,12A12,12,0,0,1,80,108Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,176,108Zm-1.07,48c-10.29,17.79-27.4,28-46.93,28s-36.63-10.2-46.92-28a8,8,0,1,1,13.84-8c7.47,12.91,19.21,20,33.08,20s25.61-7.1,33.07-20a8,8,0,0,1,13.86,8Z">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h2 class="text-[#110d1b] text-base font-bold leading-tight">Mood Tracker</h2>
+                <p class="text-[#624c9a] text-sm font-normal leading-normal">Track your emotions and identify patterns.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-1 gap-3 rounded-lg border border-[#d6cfe7] bg-[#f9f8fc] p-4 flex-col">
+              <div class="text-[#110d1b]" data-icon="Wind" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M184,184a32,32,0,0,1-32,32c-13.7,0-26.95-8.93-31.5-21.22a8,8,0,0,1,15-5.56C137.74,195.27,145,200,152,200a16,16,0,0,0,0-32H40a8,8,0,0,1,0-16H152A32,32,0,0,1,184,184Zm-64-80a32,32,0,0,0,0-64c-13.7,0-26.95,8.93-31.5,21.22a8,8,0,0,0,15,5.56C105.74,60.73,113,56,120,56a16,16,0,0,1,0,32H24a8,8,0,0,0,0,16Zm88-32c-13.7,0-26.95,8.93-31.5,21.22a8,8,0,0,0,15,5.56C193.74,92.73,201,88,208,88a16,16,0,0,1,0,32H32a8,8,0,0,0,0,16H208a32,32,0,0,0,0-64Z">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h2 class="text-[#110d1b] text-base font-bold leading-tight">Breath Coach</h2>
+                <p class="text-[#624c9a] text-sm font-normal leading-normal">Guided breathing exercises for relaxation.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-1 gap-3 rounded-lg border border-[#d6cfe7] bg-[#f9f8fc] p-4 flex-col">
+              <div class="text-[#110d1b]" data-icon="Notebook" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M184,112a8,8,0,0,1-8,8H112a8,8,0,0,1,0-16h64A8,8,0,0,1,184,112Zm-8,24H112a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm48-88V208a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32H208A16,16,0,0,1,224,48ZM48,208H72V48H48Zm160,0V48H88V208H208Z">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h2 class="text-[#110d1b] text-base font-bold leading-tight">Daily Journal</h2>
+                <p class="text-[#624c9a] text-sm font-normal leading-normal">Reflect on your day and express your
+                  feelings.</p>
+              </div>
+            </div>
+            <div class="flex flex-1 gap-3 rounded-lg border border-[#d6cfe7] bg-[#f9f8fc] p-4 flex-col">
+              <div class="text-[#110d1b]" data-icon="GameController" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <path
+                    d="M176,112H152a8,8,0,0,1,0-16h24a8,8,0,0,1,0,16ZM104,96H96V88a8,8,0,0,0-16,0v8H72a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0v-8h8a8,8,0,0,0,0-16ZM241.48,200.65a36,36,0,0,1-54.94,4.81c-.12-.12-.24-.24-.35-.37L146.48,160h-37L69.81,205.09l-.35.37A36.08,36.08,0,0,1,44,216,36,36,0,0,1,8.56,173.75a.68.68,0,0,1,0-.14L24.93,89.52A59.88,59.88,0,0,1,83.89,40H172a60.08,60.08,0,0,1,59,49.25c0,.06,0,.12,0,.18l16.37,84.17a.68.68,0,0,1,0,.14A35.74,35.74,0,0,1,241.48,200.65ZM172,144a44,44,0,0,0,0-88H83.89A43.9,43.9,0,0,0,40.68,92.37l0,.13L24.3,176.59A20,20,0,0,0,58,194.3l41.92-47.59a8,8,0,0,1,6-2.71Zm59.7,32.59-8.74-45A60,60,0,0,1,172,160h-4.2L198,194.31a20.09,20.09,0,0,0,17.46,5.39,20,20,0,0,0,16.23-23.11Z">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h2 class="text-[#110d1b] text-base font-bold leading-tight">Stress Relief Games</h2>
+                <p class="text-[#624c9a] text-sm font-normal leading-normal">Play games designed to reduce stress.</p>
+              </div>
+            </div>
+          </div>
+          <h2 class="text-[#110d1b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Testimonials
+          </h2>
+          <div
+            class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+            <div class="flex items-stretch p-4 gap-3">
+              <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPjBCzrSbH65QD_E36u_56KJlqP-XPFys1Yi8vV8ShN1J-OH_1rcy8LJseaiHF0P5W9NVj-ECuJO_Syp_-c_aR0DeLqdziTJN3AGYzyLAvSpPYqG-FMnp8rdo6J_eveSd_hAH7AYoy3DfBKPFZpNH7CGhaB-5Gqvrdu1l93SRow5VcBpIe2lXVbyQ-FSMvZsYtWUY0DnP3RN4DBJHpMFN8tXc-evsj0Y01Cv4Ljk6DQjxjDodc-FQ1-vdgM69oDbizY8UMPKJ-kOB_");'>
+                </div>
+                <div>
+                  <p class="text-[#110d1b] text-base font-medium leading-normal">"MoodCraft has helped me understand my
+                    emotions better and manage stress effectively."</p>
+                  <p class="text-[#624c9a] text-sm font-normal leading-normal">- Sarah M.</p>
+                </div>
+              </div>
+              <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRmstcwy29K4jHId1N7lRxBIhfdW0M8cpx6lb8373KM46gPBGO_Ga8FtiXrVykrs6KA5v4K9zl_Vp8VqRO2vnfNOJ-4INy9Se7P6AYZPtJOHoJP2taitycNBTWU_tzUPUNlySkPMA2Nz-1NuOEBez9_tvtW3yUx8rfZUpDBWqR_hoU-vhrhmaLVpnFU_Or4kpJdbktAN0UgkxHsPmtp9kg7FRigl8sHLcygop3F_9ZX1hOmtrGxYC4NKTuCSm-1dGUkwBGWLKhiDZE");'>
+                </div>
+                <div>
+                  <p class="text-[#110d1b] text-base font-medium leading-normal">"I love the breathing exercises and
+                    mind games. They're a great way to relax."</p>
+                  <p class="text-[#624c9a] text-sm font-normal leading-normal">- Alex P.</p>
+                </div>
+              </div>
+              <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnN3RcVPcyYVyrKW59FM0PT5ellv7PWiyimpg5AIcsmg7Kuo_4jYVWBe5aqBIZ2KRfGNiNQkiwapukhtUMtJrqnlKDy78BYO3_abdtOPbyCvJKlRGQVW2UOfFLrlVncQsXw9NB3hZUT9o7bacQiZ6d80O-FVrFIPbyNtRbGeofBdSxLNxv6emkMzNO0yj9_HJo3moNqMFDVVMBwhNPSocPHDN63q1lT0Y2xmC9tMrgtDjycFc9buZPL1Jl1i3T3C7kYkr022W5Dx1F");'>
+                </div>
+                <div>
+                  <p class="text-[#110d1b] text-base font-medium leading-normal">"This app is a game-changer for my
+                    mental well-being. Highly recommend!"</p>
+                  <p class="text-[#624c9a] text-sm font-normal leading-normal">- Emily R.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <!-- Inner Contact Box -->
+        <div class="bg-white rounded-xl shadow-lg p-6 w-[90%] max-w-md relative">
+
+          <!-- Close Button -->
+          <button id="closeContact"
+            class="absolute top-3 right-4 text-gray-500 text-xl font-bold hover:text-red-500">&times;</button>
+
+          <!-- Modal Content -->
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+
+          <form class="space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full px-3 py-2 border rounded" id="contactname" required/>
+            <input type="email" placeholder="Your Email" class="w-full px-3 py-2 border rounded" id="contactemail" required/>
+            <textarea placeholder="Your Message" class="w-full px-3 py-2 border rounded resize-none h-24" id="contactmsg" required></textarea>
+            <button type="submit"
+              class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 w-full" onclick="savecontactinfo()">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="flex justify-center bg-gray-200">
+        <div class="flex max-w-[960px] flex-1 flex-col">
+          <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+              <a class="text-[#624c9a] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+              <a class="text-[#624c9a] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+              <a class="text-[#624c9a] text-base font-normal leading-normal min-w-40" href="#" id="openContact">Contact
+                Us</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="#">
+                <div
+                  class="text-[#624c9a]  transition-all duration-300 hover:text-blue-700 hover:scale-110 cursor-pointer"
+                  data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z">
+                    </path>
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  class="text-[#624c9a] transition-all duration-300 hover:text-blue-700 hover:scale-110 cursor-pointer"
+                  data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                    </path>
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  class="text-[#624c9a]  transition-all duration-300 hover:text-blue-700 hover:scale-110 cursor-pointer"
+                  data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
+                    </path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <p class="text-[#624c9a] text-base font-normal leading-normal">© 2024 MoodCraft. All rights reserved.</p>
+          </footer>
+        </div>
+      </footer>
+    </div>
+      <div class="container">
+  <div id="suggestion-box">
+    
+  </div>
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
